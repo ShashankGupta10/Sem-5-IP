@@ -14,25 +14,29 @@ nav {
   display: flex;
   justify-content: space-between;
 }
-nav > div {
+
+nav>div {
   display: flex;
   gap: 40px;
 }
-nav > div > span {
+
+nav>div>span {
   cursor: pointer;
   padding: 8px 15px;
   border-radius: 10px;
 }
-nav > div > span:hover {
+
+nav>div>span:hover {
   transition: 1s ease-in-out;
-  background-color: lightgreen;
+  background-color: antiquewhite;
 }
+
 .hero {
   display: flex;
   justify-content: space-evenly;
 }
 
-.hero > div {
+.hero>div {
   margin-top: 100px;
   display: flex;
   flex-direction: column;
@@ -40,12 +44,12 @@ nav > div > span:hover {
   /* align-items: center; */
 }
 
-.hero > img {
+.hero>img {
   width: 600px;
   height: 500px;
 }
 
-.hero > div > button {
+.hero>div>button {
   padding: 10px 15px;
   font-size: 15px;
   background-color: antiquewhite;
@@ -53,4 +57,103 @@ nav > div > span:hover {
   border: 0px;
   cursor: pointer;
   width: 175px;
+}
+
+.services {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 100px;
+}
+
+.service {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.service>div {
+  width: 50px;
+  height: 50px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  display: block;
+  margin: auto;
+}
+
+.service>p {
+  display: block;
+  margin: auto;
+}
+
+.service>div>img {
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin: 10px;
+
+}
+
+.service>h2 {
+  display: block;
+  margin: auto;
+}
+
+
+.network>h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.network>p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.network>img {
+  display: block;
+  margin: auto;
+}
+
+.data {
+  margin: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.data>div {
+  display: flex;
+  flex-direction: column;
+}
+
+.data>div>div>div>img {
+  width: 75px;
+  height: 75px;
+}
+
+.data>div>div {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.data>div>div>div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.data>div>div>div>div {
+  display: flex;
+  flex-direction: column;
+}
+
+.hehe {
+  margin-top: 50px;
 }
