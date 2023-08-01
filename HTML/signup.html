@@ -1,67 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="../CSS/signup.css" />
-  </head>
-  <body>
-    <nav>
-      <div>
-        <span> Home </span>
-        <span> Dashboard </span>
-        <span> About us </span>
-        <span> Contact Us </span>
-      </div>
-      <div>
-        <span> Profile </span>
-        <span> Logout </span>
-        <span> Settings </span>
-      </div>
-    </nav>
-    <section>
-      <form>
-        <h1 class="sign-up">SIGN UP</h1>
 
-        <div>
-          <label for="firstName">First Name:</label>
-          <input type="text" name="firstName" id="" />
-        </div>
-        <div>
-          <label for="lastName">Last Name:</label>
-          <input type="text" name="lastName" id="" />
-        </div>
-        <div>
-          <label for="username">Username:</label>
-          <input type="text" name="username" id="" />
-        </div>
-        <div>
-          <label for="password">Password:</label>
-          <input type="password" name="password" id="" />
-        </div>
-        <div>
-          <label for="confirm-password">Confirm Password:</label>
-          <input type="password" name="confirm-password" id="" />
-        </div>
-        <div>
-          <label for="Age">Age:</label> <input type="text" name="Age" id="" />
-        </div>
-        <div>
-          <label for="gender">Gender:</label>
-          <select name="gender" id="">
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-          </select>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login & Sign up</title>
+  <link rel="stylesheet" href="../CSS/signup.css" />
+</head>
+
+<body>
+  <main>
+    <div class="box">
+      <div class="inner-box">
+        <div class="forms-wrap">
+          <form action="index.html" autocomplete="off" class="sign-in-form">
+            <div class="logo">
+              <!-- logo pending -->
+              <!-- <img src="../images/logo.png" alt="easyclass" /> -->
+              <h4>KlipFart</h4>
+            </div>
+
+            <div class="heading">
+              <h2>Welcome</h2>
+              <h6>Not registered yet?</h6>
+              <a href="#" class="toggle">Sign up</a>
+            </div>
+
+            <div class="actual-form">
+              <div class="input-wrap">
+                <input type="text" minlength="4" class="input-field input-signin-name" autocomplete="off" required />
+                <label>Username</label>
+              </div>
+
+              <div class="input-wrap">
+                <input type="password" minlength="4" class="input-field input-signin-password" autocomplete="off"
+                  required />
+                <label>Password</label>
+              </div>
+
+              <input type="submit" value="Sign In" class="sign-btn" />
+
+              <p class="text">
+                Forgot your password or you login details?
+                <a href="#">Get help</a> signing in
+              </p>
+            </div>
+          </form>
+
+          <form autocomplete="off" class="sign-up-form">
+            <div class="logo">
+              <!-- logo pending -->
+              <!-- <img src="../images/logo.png" alt="easyclass" /> -->
+              <h4>KlipFart</h4>
+            </div>
+
+            <div class="heading">
+              <h2>Get Started</h2>
+              <h6>Already have an account?</h6>
+              <a href="#" class="toggle">Sign in</a>
+            </div>
+
+            <div class="actual-form">
+              <div class="input-wrap">
+                <input type="text" minlength="4" class="input-field input-name" autocomplete="off" required />
+                <label>Name</label>
+              </div>
+
+              <div class="input-wrap">
+                <input type="email" class="input-field input-email" autocomplete="off" required />
+                <label>Email</label>
+              </div>
+
+              <div class="input-wrap">
+                <input type="password" minlength="4" class="input-field input-password" autocomplete="off" required />
+                <label>Password</label>
+              </div>
+
+              <input type="submit" value="Sign Up" class="sign-btn" />
+
+              <p class="text">
+                By signing up, I agree to the
+                <a href="#">Terms of Services</a> and
+                <a href="#">Privacy Policy</a>
+              </p>
+            </div>
+          </form>
         </div>
 
-        <button type="submit">Submit</button>
-        <div>
-          Already a member?
-          <a href="login.html">Login</a>
+        <div class="carousel">
+          <div class="images-wrapper">
+            <img src="../assets/shopping.svg" class="image img-1 show" alt="" />
+            <img src="../assets/savings.svg" class="image img-2" alt="" />
+            <img src="../assets/clothes.svg" class="image img-3" alt="" />
+          </div>
+
+          <div class="text-slider">
+            <div class="text-wrap">
+              <div class="text-group">
+                <h2>Find Products suitable for you</h2>
+                <h2>Get Best Quality Products</h2>
+                <h2>Mega Sales Every Week</h2>
+              </div>
+            </div>
+
+            <div class="bullets">
+              <span class="active" data-value="1"></span>
+              <span data-value="2"></span>
+              <span data-value="3"></span>
+            </div>
+          </div>
         </div>
-      </form>
-    </section>
-  </body>
+      </div>
+    </div>
+  </main>
+  <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  <script src="../JS/signup.js"></script>
+</body>
+
 </html>
