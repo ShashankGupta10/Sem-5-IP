@@ -1,0 +1,294 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.dashboard {
+  display: flex;
+}
+
+.sidebar {
+  padding: 22px;
+  width: 300px;
+  height: 1025px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+
+.sidebar-header {
+  display: flex;
+  gap: 25px;
+}
+
+.sidebar-header div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.components {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.component {
+  padding: 15px 15px;
+  display: flex;
+  gap: 25px;
+  border-radius: 20px;
+}
+.component:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.component img {
+  width: 30px;
+  height: 30px;
+}
+
+.component p {
+  margin-top: 3px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.search {
+  margin-top: 75px;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+
+.search input {
+  outline: none;
+  border: 0px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.001);
+  padding: 5px;
+  font-size: 20px;
+}
+
+.sidebar-footer {
+  margin-top: 150px;
+}
+
+.dashboard-center {
+  padding: 50px 50px 0 50px;
+  width: 865px;
+  height: 1025px;
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+}
+
+.dashboard-center input {
+  height: 40px;
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.search-center {
+  background-color: white;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  height: 60px;
+  margin-top: 0;
+}
+
+.search-center img {
+  margin-top: 5px;
+}
+
+.dashboard-center > div > img {
+  width: 50px;
+  height: 55px;
+  /* margin-top: 80px; */
+  border-radius: 10px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.right-side-dashboard-center {
+  display: flex;
+  gap: 20px;
+  height: 60px;
+}
+
+.right-side-dashboard-center > img {
+  border-radius: 15px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.dashboard-center-header {
+  display: flex;
+  flex-direction: column;
+  height: 75px;
+  gap: 10px;
+}
+
+.dashboard-center-header > p {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.dashboard-center-header > h2 {
+  font-size: 40px;
+}
+
+.chart-div {
+  padding: 30px;
+  width: 100%;
+  height: 350px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+
+.hehe {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard-right {
+  width: 375px;
+}
+
+.dashboard-right img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.user-card {
+  display: flex;
+  margin-top: 30px;
+  padding: 20px 15px;
+  width: 340px;
+  gap: 22px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.user-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  width: 340px;
+  height: 600px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  margin-top: 35px;
+  border-radius: 20px;
+}
+
+.actual-calendar {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5px;
+}
+
+.actual-calendar div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.actual-calendar div div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.today {
+  border-radius: 50%;
+  background-color: pink;
+  color: white;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard-card {
+  width: 355px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  height: 200px;
+  border-radius: 20px;
+  padding: 30px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.quote {
+  padding-top: 25px;
+  width: 330px;
+  height: 200px;
+  color: rgba(0, 0, 0, 0.5);
+  font-style: italic;
+}
+
+.author {
+  position: relative;
+  top: 35%;
+  left: 30%;
+  width: 200px;
+}
+
+.number {
+  margin-top: 30px;
+  color: black;
+  font-size: 70px;
+}
+
+.dashboard-card > div {
+  width: 110px;
+  height: 110px;
+  z-index: 5;
+  position: relative;
+  bottom: 75%;
+  left: 65%;
+  border-radius: 50%;
+}
+
+.dashboard-card > div > img {
+  width: 75px;
+  height: 75px;
+  position: relative;
+  top: 16%;
+  left: 17%;
+}
+
+.sponsor {
+  padding: 30px;
+  margin-top: 50px;
+  width: 340px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  height: 200px;
+}
+
+.sponsor p {
+  margin-top: 25px;
+  font-size: 20px;
+}
+
+.arrow-img {
+  width: 50px;
+  height: 50px;
+  border: none;
+}
