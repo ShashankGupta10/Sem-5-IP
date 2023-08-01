@@ -1,31 +1,323 @@
+<!-- import React from "react";
+import { Line } from "react-chartjs-2";
+import {
+  Chart,
+  CategoryScale,
+  LinearScale,
+  LineController,
+  PointElement,
+  LineElement,
+  Title,
+} from "chart.js";
+import "./Dashboard.css";
+import logo from "../assets/avatar.png";
+import search from "../assets/search.svg";
+import home from "../assets/home.svg";
+import revenue from "../assets/revenue.svg";
+import notifications from "../assets/notifications.svg";
+import analytics from "../assets/analytics.svg";
+import inventory from "../assets/inventory.svg";
+import logout from "../assets/logout.svg";
+import settings from "../assets/settings.svg";
+import profile from "../assets/profile.svg";
+import profilePhoto from "../assets/profile-image.jpg";
+import inventoryN from "../assets/inventory-new.svg";
+import chevronRight from "../assets/chevron-right.svg";
+import chevronLeft from "../assets/chevron-left.svg";
+import coin from "../assets/coin.svg";
+
+const Dashboard = () => {
+  Chart.register(
+    CategoryScale,
+    LinearScale,
+    LineController,
+    PointElement,
+    LineElement,
+    Title
+  );
+  const data = {
+    labels: [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+
+    ],
+    datasets: [
+      {
+        label: "Data",
+        data: [12, 19, 3, 5, 2, 3, 10, 25, 7],
+        fill: true,
+        borderColor: "rgba(75,192,192,1)",
+        tension: 0.5,
+      },
+      {
+        label: "Data 2",
+        data: [7, 19, 23, 19, 21, 20, 17, 10, 18],
+        fill: true,
+        borderColor: "red",
+        tension: 0.5,
+      },
+    ],
+  };
+
+  const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    backgroundColor: "white",
+    elements: {
+      line: {
+        borderWidth: 3,
+        fill: false,
+      },
+    },
+    scales: {
+      x: {
+        type: "category",
+        grid: {
+          display: false,
+        },
+      },
+      y: {
+        beginAtZero: true,
+        grid: { display: false },
+      },
+    },
+    plugins: {
+      legend: {
+        display: true,
+      },
+    },
+  };  -->
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up</title>
-  </head>
-  <body>
-    <nav>
-      <div>
-        <span> Home </span>
-        <span> Dashboard </span>
-        <span> About us </span>
-        <span> Contact Us </span>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../CSS/dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div className="dashboard">
+    <div className="sidebar">
+      <div className="sidebar-header">
+        <img src="../assets/profile.svg" alt="" />
+        <div>
+          <h3>Hathacons</h3>
+          <p>hathacons@gmail.com</p>
+        </div>
       </div>
-      <div>
-        <span> Profile </span>
-        <span> Logout </span>
-        <span> Settings </span>
+      <div className="component search">
+        <img src={search} alt="" />
+        <input type="text" placeholder="Search" />
       </div>
-    </nav>
-    <section class="sidebar"></section>
-    <section class="main-ele">
-      <div>Dashboard Element</div>
-      <div>Dashboard Element</div>
-      <div>Dashboard Element</div>
-      <div>Dashboard Element</div>
-    </section>
-  </body>
+      <div className="components">
+        <div className="component">
+          <img src={home} alt="" />
+          <p>Dashboard</p>
+        </div>
+        <div className="component">
+          <img src={revenue} alt="" />
+          <p>Revenue</p>
+        </div>
+        <div className="component">
+          <img src={notifications} alt="" />
+          <p>Notifications</p>
+        </div>
+        <div className="component">
+          <img src={analytics} alt="" />
+          <p>Analytics</p>
+        </div>
+        <div className="component">
+          <img src={inventory} alt="" />
+          <p>Inventory</p>
+        </div>
+      </div>
+      <div className="sidebar-footer">
+        <div className="components">
+          <div className="component">
+            <img src={profile} alt="" />
+            <p>Profile</p>
+          </div>
+          <div className="component">
+            <img src={settings} alt="" />
+            <p>Settings</p>
+          </div>
+          <div className="component">
+            <img src={logout} alt="" />
+            <p>Logout</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="dashboard-center">
+      <div className="hehe">
+        <div className="dashboard-center-header">
+          <h2>Hello, Lord Shashank</h2>
+          <p>What's on your mind today?</p>
+        </div>
+        <div className="right-side-dashboard-center">
+          <div className="component search search-center">
+            <img src="search" alt="" />
+            <input type="text" placeholder="Search" />
+          </div>
+          <img src={notifications} alt="" style={{ padding: "12px" }} />
+        </div>
+      </div>
+      <div className="chart-div">
+        <Line data={data} options={options} />
+      </div>
+      <div className="card-container">
+        <div className="dashboard-card" style={{ backgroundColor: "#E9FAFF" }}>
+          <p>New Packages</p>
+          <h1 className="number">300</h1>
+          <div style={{ backgroundColor: "#04B0C8" }}>
+            <img src={inventoryN} alt="" className="dashboard-card-image" />
+          </div>
+        </div>
+        <div className="dashboard-card" style={{ backgroundColor: "#E9FFF4" }}>
+          <p>Ready for Shipping</p>
+          <h1 className="number">40</h1>
+          <div style={{ backgroundColor: "#0A9D54" }}>
+            <img src={inventoryN} alt="" className="dashboard-card-image" />
+          </div>
+        </div>
+      </div>
+      <div className="card-container">
+        <div className="dashboard-card" style={{ backgroundColor: "#FFFEE9" }}>
+          <p>Points</p>
+          <h1 className="number">10</h1>
+          <div style={{ backgroundColor: "#DCC600" }}>
+            <img src={coin} alt="" className="dashboard-card-image" />
+          </div>
+        </div>
+        <div className="dashboard-card" style={{ backgroundColor: "#ffebec" }}>
+          <p>Delivered</p>
+          <h1 className="number">1000</h1>
+          <div style={{ backgroundColor: "#ff031c" }}>
+            <img src={inventoryN} alt="" className="dashboard-card-image" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="dashboard-right">
+      <div className="user-card">
+        <img src={profilePhoto} alt="" />
+        <div className="user-data">
+          <h2>Lord Shashank</h2>
+          <p>UI/UX Developer</p>
+        </div>
+        <img src={chevronRight} alt="" style={{ width: "60px" , height: "60px" , border: "0px" , marginTop: "10px" ,
+          marginLeft: "0px" , }} />
+      </div>
+      <div className="calendar">
+        <h2>Project Time</h2>
+        <p>12th July, 2023</p>
+        <img src={chevronLeft} alt="" style={{ width: "50px" , height: "50px" , border: "0px" , marginTop: "10px" ,
+          marginLeft: "75px" , position: "absolute" , bottom: "66%" , left: "87%" , cursor: "pointer" , }} />
+        <img src={chevronRight} alt="" style={{ width: "50px" , height: "50px" , border: "0px" , marginTop: "10px" ,
+          marginLeft: "75px" , position: "absolute" , bottom: "66%" , left: "%" , cursor: "pointer" , }} />
+        <div className="actual-calendar">
+          <div>
+            <div style={{ fontSize: "20px" , fontWeight: "600" }}>Sun</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>1</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>8</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>15</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>22</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>29</div>
+          </div>
+          <div>
+            <div style={{ fontSize: "20px" , fontWeight: "600" }}>Mon</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>2</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>9</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>16</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>23</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>30</div>
+          </div>
+          <div>
+            <div style={{ fontSize: "20px" , fontWeight: "600" }}>Tue</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>3</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>10</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>17</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>24</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>31</div>
+          </div>
+          <div>
+            <div style={{ fontSize: "20px" , fontWeight: "600" }}>Wed</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>4</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>11</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>18</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>25</div>
+            <div style={{ color: "rgba(0, 0, 0, 0.4)" , fontSize: "19px" , fontWeight: "600" , }}>
+              1
+            </div>
+          </div>
+          <div>
+            <div style={{ fontSize: "20px" , fontWeight: "600" }}>Thu</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>5</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }} className="today">
+              12
+            </div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>19</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>26</div>
+            <div style={{ color: "rgba(0, 0, 0, 0.4)" , fontSize: "19px" , fontWeight: "600" , }}>
+              2
+            </div>
+          </div>
+          <div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>6</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>13</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>20</div>
+            <div style={{ fontSize: "19px" , fontWeight: "600" }}>27</div>
+            <div style={{ fontSize: "20px" , fontWeight: "600" }}>Fri</div>
+            <div style={{ color: "rgba(0, 0, 0, 0.4)" , fontSize: "19px" , fontWeight: "600" , }}>
+              3
+            </div>
+          </div>
+          <div>
+            <div style="font-size: 20px; font-weight: 600;">Sat</div>
+            <div style="font-size: 20px; font-weight: 600;">7</div>
+            <div style="font-size: 20px; font-weight: 600;">14</div>
+            <div style="font-size: 20px; font-weight: 600;">21</div>
+            <div style="font-size: 20px; font-weight: 600;">28</div>
+            <div style="color: rgba(0, 0, 0, 0.4); font-size: 19px; font-weight: 600;">
+              4
+            </div>
+          </div>
+        </div>
+        <hr style="margin-top: 20px; color: rgba(0, 0, 0, 0.5)" />
+        <div className="quote">
+          <p>
+            {" "}
+            "An apple a day keeps the doctor away,<br /> A doctor a day keeps
+            the apple away"
+          </p>
+          <p className="author">- Obviously Lord Shashank</p>
+        </div>
+      </div>
+      <div className="sponsor">
+        <h2>Fun Fact</h2>
+        <p>
+          The Earl of Sandwich, John Montagu, who lived in the 1700s,
+          reportedly invented the sandwich
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
 </html>
